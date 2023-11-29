@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="h2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo">Harmony Lab</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Favourites</a></li>
+                <li><a href="#">Top Mixes</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="content">
+        <div class="right">
+            <p>Click To Play</p>
+            <img src="play.png" id="icon">
+        </div>
+
+    </div>
+    <div class="about">
+        <p>Welcome to the enchanting world of "Fairy Fountain," a mesmerizing musical journey that transports you to a realm of magic and wonder. This captivating composition, created by [Artist Name], is a blend of ethereal melodies and soothing harmonies that evoke a sense of mystery and nostalgia.</p>
+    </div>
+    <audio src="FairyFountain.mp3" type="audio/mp3" id="mysong"></audio>
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src = "pause.png";
+            }
+            else{
+                mysong.pause();
+                icon.src="play.png";
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
